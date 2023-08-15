@@ -1,27 +1,251 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+      * {
+        margin: 0;
+        padding: 0;
+      }
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+      body {
+        background-color: rgb(0, 0, 33);
+        color: white;
+        font-family: "Poppins", sans-serif;
+        touch-action: none;
+      }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        background-color: rgb(18, 18, 62);
+      }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+      .right .nav-btn {
+        background: none;
+        color: white;
+        border: none;
+        padding: 0;
+        margin: 0;
+        font-family: inherit;
+        font-size: inherit;
+      }
+
+      .right .nav-btn:hover {
+        color: yellow;
+        font-size: 1.02rem;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+
+      nav ul li {
+        list-style: none;
+        margin: 0 23px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+      }
+
+      nav ul li a:hover {
+        color: yellow;
+        font-size: 1.02rem;
+      }
+
+      main hr {
+        border: 0;
+        background: #9c97f1;
+        height: 1.2px;
+        margin: 40px 84px;
+      }
+
+      .left {
+        font-size: 1.5rem;
+      }
+
+      .firstSection {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 130px 0;
+      }
+
+      .firstSection>div {
+        width: 30%;
+      }
+
+      .leftSection {
+        font-size: 2rem;
+      }
+
+      .leftSection .buttons {
+        padding: 50px 0;
+      }
+
+      .leftSection .btn {
+        padding: 12px;
+        background: #1e2167;
+        color: white;
+        border: 2px solid white;
+        border-radius: 6px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .leftSection .btn:hover {
+        background-color: rgb(111, 111, 226);
+      }
+
+      .rightSection img {
+        width: 80%;
+      }
+
+      .purple-username {
+        color: rgb(170, 107, 228);
+      }
+
+      .grey-text {
+        color: grey;
+      }
+
+      #element {
+        color: rgb(170, 107, 228);
+      }
+
+      .secondSection {
+        max-width: 80vw;
+        margin: auto;
+        height: 141vh;
+      }
+
+      .secondSection h1 {
+        font-size: 1.9rem;
+      }
+
+      /* secondSection .Box styling is for the horizontal line in the Work experience section*/
+      .secondSection .box {
+        background: white;
+        width: 50vw;
+        height: 2px;
+        margin: 56px 0;
+        display: flex;
+      }
+
+      .secondSection .vertical {
+        height: 93px;
+        width: 1px;
+        background-color: white;
+        margin: 0 6vw;
+      }
+
+      .vertical-title {
+        position: relative;
+        top: 75px;
+        width: 150px;
+      }
+
+      .vertical-description {
+        position: relative;
+        top: 86px;
+        color: gray;
+        width: 150px;
+        font-size: 15px;
+      }
+
+      .box-top-image {
+        width: 23px;
+        position: relative;
+        top: -32px;
+        left: -9px;
+      }
+
+      footer {
+        position: relative;
+        background-color: rgb(18, 18, 62);
+      }
+    
+      .footer {
+        position: inherit;
+        display: flex;
+        padding: 23px 123px;
+        justify-content: space-evenly;
+      }
+
+      .footer ul {
+        list-style: none;
+      }
+
+      .footer>div {
+        width: 223px;
+      }
+
+      footer .footer-rights {
+        text-align: center;
+        color: gray;
+        padding: 12px 0;
+      }
+
+      @media screen and (max-width: 1200px) {
+        nav {
+          flex-direction: column;
+        }
+
+        body {
+          /* background-color: burlywood; */
+          min-width: fit-content;
+        }
+
+        .box {
+          flex-direction: column;
+        }
+
+        .secondSection .vertical {
+          height: unset;
+        }
+
+        .firstSection {
+          flex-direction: column-reverse;
+        }
+
+        .leftSection {
+          width: 100% !important;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .vertical-title,
+        .vertical-description {
+          left: 45px;
+          top: 14px;
+        }
+
+        .secondSection {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          /* height: 100vh; */
+        }
+
+        .secondSection .box {
+          width: 50vw;
+        }
+
+        .box-top-image {
+          top: 57px;
+        }
+
+        .rightSection {
+          width: 361px !important;
+          display: flex;
+          justify-content: center;
+        }
+      }
+
+      @media screen and (max-width: 331px) {
+        .secondSection {
+          height: 154vh;
+        }
+      }
